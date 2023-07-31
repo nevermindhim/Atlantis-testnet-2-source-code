@@ -1,2 +1,11 @@
-# Atlantis-testnet-2
-Atlantus Testnet2
+
+<div align="center">
+  <h1> Atlantis Testnet </h1>
+</div>
+
+
+## Installation
+
+```bash
+make install
+```

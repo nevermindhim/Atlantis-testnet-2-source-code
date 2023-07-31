@@ -1,0 +1,39 @@
+accounts:
+  - name: alice
+    coins: ["100000000uatom", "100000000000000000000abcx"]
+  - name: bob
+    coins: ["5000000000000abcx"]
+validator:
+  name: alice
+  staked: "100000000000000000000abcx"
+faucet:
+  name: bob 
+  coins: ["10abcx"]
+build:
+  binary: "blockxd"
+init:
+  home: "$HOME/.blockxd"
+  app:
+    evm-rpc:
+      address: "0.0.0.0:8545"     # change the JSON-RPC address and port
+      ws-address: "0.0.0.0:8546"  # change the JSON-RPC websocket address and port
+genesis:
+  chain_id: "blockx_12345-1"
+  app_state:
+    staking:
+      params:
+        bond_denom: "abcx"
+    mint:
+      params:
+        mint_denom: "abcx"
+    crisis:
+      constant_fee:
+        denom: "abcx"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "abcx"
+    evm:
+      params:
+        evm_denom: "abcx"

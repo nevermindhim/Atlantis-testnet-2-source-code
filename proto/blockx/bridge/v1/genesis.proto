@@ -1,0 +1,14 @@
+syntax = "proto3";
+package blockx.bridge.v1;
+
+import "gogoproto/gogo.proto";
+import "blockx/bridge/v1/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/defi-ventures/bcx-testnet-7/x/bridge/types";
+
+// GenesisState defines the bridge module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}

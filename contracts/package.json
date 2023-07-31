@@ -1,0 +1,26 @@
+{
+  "name": "blockx",
+  "version": "1.0.0",
+  "description": "<!-- parent:   order: false -->",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/defi-ventures/bcx-testnet-5"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/defi-ventures/bcx-testnet-5/issues"
+  },
+  "homepage": "https://github.com/defi-ventures/bcx-testnet-5#readme"
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package blockx.bridge.v1;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/defi-ventures/bcx-testnet-7/x/bridge/types";
+
+// Msg defines the Msg service.
+service Msg {
+      rpc SentToBlockx(MsgSentToBlockx) returns (MsgSentToBlockxResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgSentToBlockx {
+  string creator = 1;
+  string recipient = 2;
+  string amount = 3;
+}
+
+message MsgSentToBlockxResponse {
+}
+
+// this line is used by starport scaffolding # proto/tx/message
