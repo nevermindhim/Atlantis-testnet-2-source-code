@@ -78,3 +78,25 @@ chmod +x validator.sh
 1. Make sure that the voting power of 1 validator does not reach more than 30% to avoid potential too much dependency of the chain to a single node only.
 2. Dont use the genesis.json file in this repository and let it create its own genesis.json file
 3. persistent_peer is important in the config but it is safer to have some nodes in the seed cofiguration of the config file located in .blockxd/config/config.toml file
+
+
+# Submitted Proposals
+Proposals were submitted for this Atlantis Testnet in order to improve the chain.
+For this testnet, we submitted the proposals below. The files slash.json and metadata.json is also located in this repo:
+
+1) Change Slashing Window
+The Slashing window dictates how many blocks can a validator miss before they get jailed which slashes their earnings. The previous setting was 100 blocks and with a block time of around 1 second, it only gives the validator around 2 minutes to upgrade their server or have a downtime. The submitted proposal increased the window to 40,000 blocks giving enough time for validators to perform maintenance in their servers. 
+Below is the command used
+
+```
+./blockxd tx gov submit-proposal param-change slash.json --from node1 --chain-id blockx_50-1 --gas 1000000
+```
+
+
+2) Register Coin for metadata
+This metadata proposal was submitted in order for Ping Explorer and may also include future dapps to be able to recognize the denominations of Atlantis Testnet which is abcx and bcx with BCX = 1e18 abcx.
+Below is the command used
+
+```
+./blockxd tx gov submit-proposal register-coin metadata.json --from node1 --chain-id blockx_50-1 --gas 2000000 --title "BCX Metadata proposal" --description "For Ping UI to be able to detect the number of decimals BCX has"
+```

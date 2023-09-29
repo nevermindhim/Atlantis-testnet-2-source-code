@@ -1,0 +1,13 @@
+
+{
+    "title": "Change Slashing Window",
+    "description": "Change Slashing Window to 40000",
+    "changes": [
+      {
+        "subspace": "slashing",
+        "key": "params",
+        "value": {"signed_blocks_window": "40000"}
+      }
+    ],
+    "deposit": "100000000000000000000abcx"
+}
